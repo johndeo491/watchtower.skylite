@@ -1,0 +1,181 @@
+.DashBoard {
+    width: 100%;
+    height: 100vh;
+    display: block;
+    background-color: white;
+    overflow: hidden;
+    overflow-y: auto;
+    padding: 110px 0 0 0;
+
+    .heading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        display: flex;
+        background-color: #ffffff;
+        justify-content: center;
+        z-index: 1000;
+        box-shadow: 0px 9px 10px #00000024;
+
+        .logo {
+            width: 200px;
+            height: 60px;
+            display: flex;
+            align-self: center;
+            background-image: url(/assets/images/logo_blue.png);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+
+    .main {
+        width: 100%;
+        padding: 0 5%;
+        height: fit-content;
+        min-height: fit-content;
+        display: block;
+
+        @media (max-width: 550px) {
+            padding: 0 20px;
+        }
+
+        * {
+            font-family: open_sans !important;
+        }
+
+        .table_ {
+            thead {
+                * {
+                    background-color: #0e59ff;
+                    font-weight: 600;
+                }
+            }
+
+            tbody {
+                .name {
+                    text-transform: capitalize;
+                }
+
+                .action {
+                    width: fit-content;
+                    min-width: fit-content;
+                    height: 100%;
+                    display: flex;
+
+                    .action_btn {
+                        width: 40px;
+                        height: 40px;
+                        margin: 0 3px;
+                        filter: brightness(100%);
+                        transition: .4s;
+
+                        &:hover {
+                            filter: brightness(90%);
+                        }
+
+                        svg {
+                            width: 18px;
+                            height: 18px;
+                        }
+
+                        &.verify {
+                            background-color: white;
+
+                            svg {
+                                fill: #00ff47
+                            }
+
+                            &.done {
+                                background-color: #00ff47;
+
+                                svg {
+                                    fill: #ffffff
+                                }
+
+                            }
+                        }
+
+                        &.wallet {
+                            background-color: white;
+
+                            svg {
+                                fill: #0e59ff
+                            }
+
+                            &.done {
+                                background-color: #0e59ff;
+
+                                svg {
+                                    fill: #ffffff
+                                }
+                            }
+                        }
+
+                        &.lock {
+                            background-color: white;
+
+                            svg {
+                                fill: #f44336
+                            }
+
+                            &.done {
+                                background-color: #f44336;
+
+                                svg {
+                                    fill: #ffffff
+                                }
+                            }
+                        }
+
+                        &.hidden {
+                            background-color: white;
+
+                            svg {
+                                fill: #d200d1
+                            }
+
+                            &.done {
+                                background-color: #d200d1;
+
+                                svg {
+                                    fill: #ffffff
+                                }
+                            }
+                        }
+
+                        &.delete {
+                            background-color: white;
+
+                            svg {
+                                fill: #ff3030
+                            }
+
+                            &.done {
+                                background-color: #ff3030;
+
+                                svg {
+                                    fill: #ffffff
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        display: block;
+        font-size: 14px;
+        font-family: open_sans;
+        margin: 50px 0 0 0;
+    }
+}

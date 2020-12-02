@@ -1,0 +1,176 @@
+.contact {
+    width: 100%;
+    height: auto;
+    min-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    background-image: url(/assets/bg.png);
+
+    * {
+        font-family: open_sans !important;
+    }
+
+    .first {
+        width: 100%;
+        height: fit-content;
+        min-height: fit-content;
+        display: flex;
+        flex-wrap: wrap;
+
+        .right {
+            width: 100%;
+            height: fit-content;
+            min-height: fit-content;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0;
+
+            &::before {
+                content: "";
+                width: 100px;
+                height: 100px;
+                display: flex;
+                align-self: center;
+                background-image: url(/assets/images/email.png);
+                background-position: center;
+                background-size: cover;
+                margin: 20px 0;
+            }
+
+            .title {
+                width: 100%;
+                height: auto;
+                padding: 0 10%;
+                text-align: center;
+                font-size: 30px;
+                font-family: gothic_bold;
+                color: #545454;
+            }
+
+            .txt {
+                width: 100%;
+                height: auto;
+                padding: 0 10%;
+                text-align: center;
+                font-size: 15px;
+                color: #989aa7;
+            }
+
+            form {
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+
+                .inputBox {
+                    width: 45%;
+                    height: 45px;
+                    margin: 15px 5px;
+
+                    &:nth-last-of-type(1) {
+                        width: 90%;
+                        min-width: 95%;
+                        align-self: center;
+                    }
+
+                    label {
+                        color: #2c4bf5;
+                        font-family: gothic;
+                        font-size: 14px;
+                    }
+
+                    input {
+                        font-family: gothic;
+                        font-size: 14px;
+                        color: #757577;
+                    }
+                }
+
+                .btn {
+                    width: 200px;
+                    height: 45px;
+                    background-color: #f2f4fb;
+                    color: #2b50ed;
+                }
+            }
+        }
+    }
+
+    .second {
+        width: 100%;
+        height: auto;
+        min-height: 400px;
+        max-height: 500px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .content {
+            width: 45%;
+            min-width: 300px;
+            height: 200px;
+            display: flex;
+            padding: 0 10px;
+            margin: 20px 10px;
+            align-self: center;
+            border-radius: 12px;
+            background-color: white;
+            box-shadow: 0 15px 100px 0 rgba(0, 0, 0, .05);
+
+            .icon {
+                width: 60px;
+                height: 60px;
+                margin: 0 30px 0 40px;
+                display: flex;
+                align-self: center;
+                fill: #2b50ed;
+            }
+
+            div {
+                width: calc(100% - 30px + 40px + 60px);
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                .title {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    text-transform: uppercase;
+                    text-align: center;
+                    font-family: gothic_bold;
+                    color: #202020;
+                }
+
+                p {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    justify-content: center;
+                    text-align: left;
+                    color: #545454;
+                    font-size: 14px;
+                }
+            }
+
+            .link {
+                width: fit-content;
+                height: 40px;
+                line-height: 40px;
+                display: flex;
+                font-size: 14px;
+                font-family: gothic_bold;
+                color: #2c4bf5;
+                text-decoration: none;
+                cursor: pointer;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
